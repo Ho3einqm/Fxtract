@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fxtract</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      const random = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+      };
+
+      const uniqueID = () => {
+        let characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let id = "";
+        for (i = 0; i < 8; i++) {
+          id += characters[random(0, characters.length)];
+        }
+        return id;
+      };
+    </script>
+  </body>
 </html>
